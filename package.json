@@ -1,0 +1,62 @@
+{
+  "name": "react-side-bar",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/lab": "^5.0.0-alpha.142",
+    "@mui/material": "^5.14.7",
+    "@mui/x-data-grid": "^6.9.0",
+    "@syncfusion/ej2-react-buttons": "20.4.38",
+    "@syncfusion/ej2-react-dropdowns": "^20.4.38",
+    "@syncfusion/ej2-react-inputs": "20.4.38",
+    "@syncfusion/ej2-react-pdfviewer": "20.4.38",
+    "@syncfusion/ej2-react-splitbuttons": "20.4.38",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.0",
+    "bootstrap": "^5.2.3",
+    "browser-image-compression": "^2.0.2",
+    "framer-motion": "^6.2.3",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.30.1",
+    "pspdfkit": "^2023.4.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-paginate": "^8.1.4",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.1",
+    "react-title-case": "^1.0.1",
+    "sweetpagination": "^1.0.15",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
