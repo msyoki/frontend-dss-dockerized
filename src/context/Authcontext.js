@@ -23,6 +23,7 @@ export const AuthProvider = ({children}) => {
 
     // login request
     let loginUser = async(e)=>{
+        console.log(`${constants.devApiBaseUrl}/api/token/`)
         e.preventDefault()
         try {
             const response = await axios.post(`${constants.devApiBaseUrl}/api/token/`,{
