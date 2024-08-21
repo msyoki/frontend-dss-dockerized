@@ -307,12 +307,13 @@ const SignatureDialog = (props) => {
             let data = JSON.stringify({
                 "signature": `${signature.signatureValue}`,
                 "email":`${props.signeremail}`,
-                "signerGuid": `${props.signerguid}`,
-                "signerEmail": addEmail,
+                // "signerGuid": `${props.signerguid}`,
+                // "signerEmail": addEmail,
                 "signTimestamp": addTimeStamp,
                 "date": addDateStamp,
                 "annotate":annotate
             });
+            // console.log(data)
   
             let config = {
                 method: 'post',
@@ -324,16 +325,17 @@ const SignatureDialog = (props) => {
                 },
                 data: data
             };
+           
             setLoading(true)
             axios.request(config)
                 .then((response) => {
-                    // console.log(JSON.stringify(response.data));
+                    // console.log(response.data.signature.image);
                     setLoading(false)
-                    props.setTempSignature(response.data.signature);
+                    props.setTempSignature(response.data.signature.image);
                     if (response.data.signature) {
                         props.setSaveSignature(signature.signatureValue)
                         let signaturetype = "drawn"
-                        props.pdskPlaceSignature(response.data.signature, signaturetype, annotate)
+                        props.pdskPlaceSignature(response.data.signature.image, signaturetype, annotate)
 
                         props.setAddSignature(true)
                         props.setOpenDialogSignature(false)
@@ -451,8 +453,8 @@ const SignatureDialog = (props) => {
             let data = JSON.stringify({
                 "signature": `${props.tempUploadedsignature}`,
                 "email":`${props.signeremail}`,
-                "signerGuid": `${props.signerguid}`,
-                "signerEmail": addEmail,
+                // "signerGuid": `${props.signerguid}`,
+                // "signerEmail": addEmail,
                 "signTimestamp": addTimeStamp,
                 "date": addDateStamp,
                 "annotate": props.isStamp? false: annotate
@@ -474,13 +476,13 @@ const SignatureDialog = (props) => {
             axios.request(config)
                 .then((response) => {
                     setLoading(false)
-     
-                    props.setTempSignature(response.data.signature)
+                    // console.log(JSON.stringify(response.data.signature.image));
+                    props.setTempSignature(response.data.signature.image)
                     setStamp(false)
                     //copy
                     if (props.tempUploadedsignature) {
                         let signaturetype = "upload"
-                        props.pdskPlaceSignature(response.data.signature, signaturetype, annotate)
+                        props.pdskPlaceSignature(response.data.signature.image, signaturetype, annotate)
 
 
                         props.setAddSignature(true)
